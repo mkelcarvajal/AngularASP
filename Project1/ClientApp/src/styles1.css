@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.2fr 2.8fr 0.6fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    ". . . ."
+    "body-main body-main body-main body-main"
+    "footer footer footer footer";
+}
+
+.header { grid-area: header; }
+
+.body-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "principal-message principal-message principal-message"
+    "body-message body-message body-message";
+  grid-area: body-main;
+}
+
+.principal-message { grid-area: principal-message; }
+
+.body-message { grid-area: body-message; }
+
+.footer { grid-area: footer; }
+
+body {
+  background-color: #D6EAF8;
+}
+
+#tabla {
+  margin-top: 80px;
+}
+
+#carousel {
+  margin-top: 10px;
+}

@@ -1,0 +1,45 @@
+<div class="container" id="formulario">
+  <form (submit)="submitOperador()">
+    <div class="form-group">
+      <input type="text" name="nombre" [(ngModel)]="operador.nombre" class="form-control" placeholder="Nombre del Operador" autofocus>
+    </div>
+    <div class="form-group">
+      <input [class.borderColor]='operador.rut.length > 0 && validarRut(operador.rut) === false' type="text" name="rut" [(ngModel)]="operador.rut" required (blur)="validarRut(operador.rut)" class="form-control" placeholder="Rut del Operador" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="text" name="licencia" [(ngModel)]="operador.licencia" class="form-control" placeholder="Licencia del operador" autofocus>
+    </div>
+    <div class="form-group">
+      <select class="form-control" name="estado" [(ngModel)]="operador.estado" autofocus>
+        <option [ngValue]="false">Inactivo</option>
+        <option [ngValue]="true">Activo</option>
+      </select>
+    </div>
+    <button class="btn btn-primary btn-block">Guardar</button>
+  </form>
+</div>
+
+<div class="container">
+  <table class="table" id="tabla">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">RUT</th>
+      <th scope="col">Licencia</th>
+      <th scope="col">Estado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let operator of this.operadores; let i = index">
+      <td>{{operator.id}}</td>
+      <td>{{operator.nombre}}</td>
+      <td>{{operator.rut}}</td>
+      <td>{{operator.licencia}}</td>
+      <td>{{operator.estado | estadoPipe }}</td>
+      <td><button class="btn btn-danger" (click)="deleteOperador(operator.id, i)">Eliminar Operador</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

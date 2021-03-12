@@ -1,0 +1,68 @@
+<div id="navegar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://www.fcab.cl/wp-content/uploads/2020/07/lamina01_logoBlanco.png" height="85em" width="160em" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="operador">Operadores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="tren">Trenes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<!-- Site footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>Acerca de</h6>
+        <p>Bolívar 255 Antofagasta, Chile<br> Casilla ST<br> Sistema de consultas, sugerencias y reclamos: +56229257525 - conectados@fcab.cl<br> Mesa central: +56552206100</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Links</h6>
+        <ul class="footer-links">
+          <li><a href="#">Acerca de nosotros</a></li>
+          <li><a href="#">Contactanos</a></li>
+          <li><a href="#">Contribuciones</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2021 Todos los derechos reservador por
+          <a href="#">FCAB.cl</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>F</a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i>T</a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i>Y</a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i>L</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+

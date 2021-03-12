@@ -1,0 +1,41 @@
+<div class="container" id="formulario">
+  <form (submit)="submitTren()">
+    <div class="form-group">
+      <input type="text" name="numeroTren" (keydown)="validarNumero($event)" required [(ngModel)]="tren.numeroTren" class="form-control" placeholder="Numero del Tren" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="text" name="observacion" [(ngModel)]="tren.observacion" class="form-control" placeholder="Observacion del Tren" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="number" name="operadorId" [(ngModel)]="tren.operadorId" class="form-control" autofocus>
+      <!--<select class="form-control" name="estado" [(ngModel)]="tren.operadorId" autofocus>
+        <option [ngValue]="false">Inactivo</option>
+        <option [ngValue]="true">Activo</option>
+      </select>-->
+    </div>
+    <button class="btn btn-primary btn-block">Guardar</button>
+  </form>
+</div>
+
+<div class="container p-5">
+  <table class="table" id="tabla">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Numero de tren</th>
+      <th scope="col">Observacion</th>
+      <th scope="col">Operador</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let train of this.trenes; let i = index">
+      <td>{{train.id}}</td>
+      <td>{{train.numeroTren}}</td>
+      <td>{{train.observacion}}</td>
+      <td>{{train.operadorId}}</td>
+      <td><button class="btn btn-danger" (click)="deleteTren(train.id, i)">Eliminar Tren</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
